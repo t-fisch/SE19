@@ -121,37 +121,18 @@
         <h4 id='terminvereinbarung'>Termine können telefonisch vereinbart werden: <a class="telefonnummer" href="tel:+496306701677">06306-701677</a></h4>
     </div>
 
-
-
-    {% for c in cm %}
-  <div>
-    <p><b>Your comment gut successfully added:</b> <b>{{c.body}}</b></p>
+<div class="newsection">
+      <h2 id="anchor-leaveComment">Reviews</h2>
 </div>
+
+{% for c in cm %}
+  <div>
+    <p><b>{{c.firstname}}</b>, <b>{{c.lastname}}:</b> <b>{{c.body}}</b></p>
+  </div>
 {% endfor %}
 
-<div class="newsection">
-      <h2 id="anchor-leaveComment">Leave a Comment</h2>
+<div class="btn-div">
+<a class="btn" type="button" href="{{ url_for('leaveComment') }}">Leave a Comment</a>
 </div>
-<div class="leaveComment">
-      <form class="leaveComment" action="" method="post" novalidate>
-          {{ form.hidden_tag() }}
-          <p>
-              {{ form.firstname.label }}<br>
-              {{ form.firstname(size=50) }}<br>
-          </p>
-          <p>
-              {{ form.lastname.label }}<br>
-              {{ form.lastname(size=50) }}<br>
-          </p>
-          <p>
-              {{ form.body.label }}<br>
-              {{ form.body(cols="80", rows="20") }}
-              {% for error in form.body.errors %}
-              <span style="color: red;">[{{ error }}]</span>
-              {% endfor %}
-              <br>
-          </p>
-          <p>{{ form.submit() }}</p>
-      </form>
-</div>
+
 {% endblock %}

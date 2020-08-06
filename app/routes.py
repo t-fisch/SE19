@@ -4,8 +4,18 @@ from app.models import Comment
 from app import app, db
 
 @app.route('/')
-@app.route('/index', methods=['GET', 'POST'])
+@app.route('/index')
 def index():
+    cm = Comment.query.all()
+    return render_template('index.html', title='Home', cm = cm)
+
+@app.route('/showreviews')
+def showreviews():
+    cm = Comment.query.all()
+    return render_template('showreviews.html', title="Reviews", cm=cm)
+
+@app.route('/leaveComment', methods=['GET', 'POST'])
+def leaveComment():
     form = CommentForm()
     if form.validate_on_submit():
         flash('New Comment from {} {}: {}'.format(
@@ -15,12 +25,8 @@ def index():
         db.session.add(c)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('index.html', title='Home', form = form)
-
-@app.route('/showreviews')
-def showreviews():
-    cm = Comment.query.all()
-    return render_template('showreviews.html', title="Reviews", cm=cm)
+    return render_template('leaveComment.html', title='Home', form = form)
+#    return render_template('leaveComment.html', title="Leave a Comment")
 
 @app.route('/schulmedizin')
 def schulmedizin():
