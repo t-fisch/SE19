@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <img class="intro_pic" src="{{url_for('static', filename='img/banner/Mikrobiologie.png')}}" />
+   <div class= "title-therapie">
+       <h1>Mit Bakterien heilen</h1>
+       <p class="subtitle-therapie"><h4>Mikrobiologie</h4></p>
+   </div>
+
+   <div class= 'container-Schulmedizin'>
+       <div class= "intro-therapie">
+               <p>Laut Hippokrates sitzt der Tod im Darm, also kann man folgern: Gesundheit beginnt auch im Darm.</p>
+       </div>
+       <div class= "p-left">
+               <p class= 'therapie-coloum'>
+                 Tatsächlich ist mitentscheidend für ein intaktes Immunsystem, dass der Darm gesund ist. Dies zeigt sich an einer
+                 gut funktionierenden Darmschleimhaut, einer geschlossenen Darmbarriere und einer ausgeglichenen Besiedelung mit
+                 Darmbakterien. Andernfalls  leiden wir unter Stuhlproblemen, chronischen Entzündungsprozessen, gehäuften Infekten,
+                 Hauterkrankungen, Allergien, bis hin zu psychischen Problemen und irgendwann eventuell unter bösartigen
+                 Darmerkrankungen. Dem kann vorgebeugt werden- durch gesunde Ernährung, Pflege der Darmschleimhaut und Unterstützung
+                 des Darmmikrobioms, also der Besiedelung mit Darmbakterien.
+               </p>
+       </div>
+       <div class= "p-right">
+               <p class= 'therapie-coloum'>
+                 Ein Mensch mit einem gesunden Darm wird seltener erkranken. In stressigen Zeiten – also bei Zahnung, Wachstum,
+                  Schlafstörung, Infekten, psychischen Belastungen – kann die prophylaktische Gabe von Darmbakterien sinnvoll sein.
+                  Als ein "Muss" sehen wir die Darmsanierung nach antibiotischer Therapie an. Auch bei Allergien und Hauterkrankungen
+                  setzen wir eine  gezielte mikrobiologische Behandlung begleitend sehr erfolgreich ein. Vor der Behandlung wird eine
+                  genaue Stuhldiagnostik durchgeführt. Sie bildet die Grundlage der mirkrobiologischen Therapie.
+               </p>
+       </div>
+{% endblock %}

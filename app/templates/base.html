@@ -1,0 +1,36 @@
+<html>
+    <head>
+      <title>{{ title }} Dr.Christa Kliegel-Fischer</title>
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/schulmedizin.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/akupunktur.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/homoeopathie.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/mikrobiologie.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/ernaehrung.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/weitere.css')}}">
+    </head>
+    <body>
+        <div class="nav-bck-img">
+            <a class="logo_banner" src="{{url_for('static', filename='img/Logo/Logo_web_big.png')}}"
+          <div class="nav-links">
+            <a class="links" href="{{ url_for('showreviews') }}">Reviews</a>
+            <a class="links" href="{{ url_for('index') }}">Home</a>
+          </div>
+        </div>
+        <div>
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <ul>
+              {% for message in messages %}
+              <li>{{ message }}</li>
+              {% endfor %}
+          </ul>
+          {% endif %}
+          {% endwith %}
+        {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

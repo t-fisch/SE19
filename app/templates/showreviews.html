@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Reviews</h1>
+
+    {% for c in cm %}
+  <div>
+    <p><b>{{c.firstname}}</b>, <b>{{c.lastname}}:</b> <b>{{c.body}}</b></p>
+</div>
+{% endfor %}
+{% endblock %}

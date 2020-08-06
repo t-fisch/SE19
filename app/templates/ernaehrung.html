@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <img class="intro_pic" src="{{url_for('static', filename='img/banner/Ernaehrung.png')}}" />
+   <div class= "title-therapie">
+       <h1>Man ist, was man isst</h1>
+       <p class="subtitle-therapie"><h4>Ernährung</h4></p>
+   </div>
+
+   <div class= 'container-Schulmedizin'>
+       <div class= "intro-therapie">
+               <p>Essen wir also was schmeckt, uns Energie liefert und zu uns passt- dem Alter dem Individuum, dem Menschen angepasst!</p>
+       </div>
+       <div class= "p-left">
+               <p class= 'therapie-coloum'>
+                 Vor etwa 10 000 Jahren wurde der Mensch sesshaft und begann Ackerbau und Viehzucht zu betreiben. Seitdem können
+                 wir Kuhmilch und Getreide zu uns nehmen, werden schnell satt, müssen uns nicht mehr viel bewegen, um zu unserer
+                 täglichen Nahrung zu kommen, wie es in der Steinzeit noch erforderlich war. Wintervorräte sind heutzutage kaum
+                 noch notwendig. Solche Aspekte sollten wir für unsere Ernährung berücksichtigen, denn unsere genetischen Voraussetzungen
+                 ändern sich langsamer als unsere Lebensbedingungen. Damit das Essen unsere „Mitte“ stärkt, müssen wir also:
+                   <ul id='ul'>
+                      <li> so viele Kalorien zu uns nehmen, wie wir benötigen</li>
+                      <li> Getreide und Proteine essen, welche zu unserer Genetik passen </li>
+                      <li> genügend gute Fette zu uns nehmen </li>
+                      <li> mit tierischen Eiweiß maßvoll umgehen </li>
+                      <li> Gemüse mit wenig Fraßschutzstoffgehalt bevorzugen </li>
+                      <li> wenig süße Früchte verzehren </li>
+                      <li> basisch essen, um Übersäuerung zu vermeiden </li>
+                      <li> biologisch hergestellte Lebensmittel verwenden </li>
+                      <li> und genügend Wasser trinken  </li>
+                   </ul>
+               </p>
+       </div>
+       <div class= "p-right">
+               <p class= 'therapie-coloum'>
+                Berücksichtigen wir diese Tatsachen nicht, „erhalten wir die Quittung“. Das Immunsystem wird dauerhaft übermäßig 
+                gefordert, die Darmgesundheit leidet, wir verlieren chronisch Energie durch ständige unterschwellige
+                Entzündungsaktivität. <br>
+                Wir können testen, ob der Körper Kohlenhydrate oder Eiweiße nicht verträgt, suchen also nach Lactose-, Fruktose-,
+                Sorbitintoleranzen bzw. Kuhmilchprotein- und anderen Allergien. Dabei differenzieren wir zwischen Allergien und
+                Unverträglichkeiten wobei letztere weniger bekannt sind und in ihrer Relevanz unterschiedlich diskutiert werden.
+                <br>
+                Die Folgen ungünstiger Ernährung zeigen sich in spezieller Darmdiagnostik zum Beispiel als Histaminintoleranz
+                und Veränderung des für das Immunsystem so wichtigen Darmmikrobioms.
+               </p>
+       </div>
+{% endblock %}

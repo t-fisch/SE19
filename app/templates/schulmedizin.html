@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <img class="intro_pic" src="{{url_for('static', filename='img/banner/Schulmedizin.png')}}" />
+   <div class= "title-therapie">
+       <h1>Leitlinien geben Orientierung</h1>
+       <p class="subtitle-therapie"><h4>Schulmedizin</h4></p>
+   </div>
+
+   <div class= 'container-Schulmedizin'>
+       <div class= "intro-therapie">
+               <p>Nach dem Medizinstudium an der Johannes-Gutenberg-Universität in Mainz, dem Praktischen Jahr an der University
+               of London und der Facharztweiterbildung in der Kinderklinik des West-Pfalzklinikums Kaiserslautern eröffnete
+               ich meine eigene Praxis in Trippstadt. </p>
+       </div>
+       <div class= "p-left">
+               <p class= 'therapie-coloum'>
+                   Wir führen alle gängigen Untersuchungen durch um Diagnosen gewissenhaft zu untermauern:
+                   <ul id='ul'>
+                      <li> Labordiagnostik ( Blut, Urin, Stuhl, Sekrete)</li>
+                      <li> Allergietestung </li>
+                      <li> Otoskopie </li>
+                      <li> Ophtalmoskopie </li>
+                      <li> Audiometrie </li>
+                      <li> EKG </li>
+                      <li> Lungenfunktion </li>
+                      <li> Ultraschall (Säuglingshüfte, Schädel, Abdomen, Nieren, Retroperitonealorgane) </li>
+                   </ul>
+                    Besonderen Wert legen wir auf mikrobiologische Diagnostik um Antibiotika, aber auch Probiotika,
+                    nicht unnötig sondern gezielt einzusetzen. So vermeiden wir die Ausbildung von Resistenzen und
+                    unnötige Belastungen des Immunsystems
+               </p>
+       </div>
+       <div class= "p-right">
+               <p class= 'therapie-coloum'>
+                       Vorsorgeuntersuchungen helfen frühzeitig die Weichen zu stellen falls in der Entwicklung eines Kindes oder
+                       Jugendlichen Besonderheiten auftreten. Neben dem üblichen Untersuchungsgang ist die Entwicklungsdiagnostik
+                       ein besonderer Schwerpunkt der Vorsorge. Wirksame Unterstützung bekommen Kinder mit und ohne Auffälligkeiten
+                       für ihre kognitive, grob- und feinmotorische Entwicklung bereits durch spezielle Handlungsanleitungen wie sie
+                       die Primaristic entwickelt hat.
+                       <br>
+                       Impfungen sind Bestandteil des  Vorsorgeprogramms. Wir orientieren uns an den Empfehlungen der Ständigen
+                       Impfkommission (STIKO), beziehen impfkritische Erwägungen in die Impfentscheidung ein und finden in Absprache
+                       mit den Eltern für das Kind ein optimales Impfregime.
+               </p>
+       </div>
+{% endblock %}

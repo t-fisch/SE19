@@ -1,0 +1,53 @@
+.intro_pic{
+  width: 100%;
+  height: auto;
+}
+
+.title-therapie{
+    margin-top: -6%;
+    margin-left: 20%;
+}
+
+.intro-therapie { grid-area: intro-therapie; }
+.p-left { grid-area: p-left; }
+.p-right { grid-area: p-right; }
+.b-left {grid-area: b-left; }
+.b-right {grid-area: b-right;}
+
+
+.container-Schulmedizin{
+    display: grid;
+    position: center;
+    grid-template-areas:
+        'intro-therapie intro-therapie'
+        'p-left p-right'
+        'b-left b-right';
+    margin-left: 20%;
+    margin-right: 25%;
+    margin-top: 4%;
+    grid-gap: 20px;
+}
+
+.grid-container > div {
+    text-align: left;
+}
+
+.therapie-coloum{
+    margin-right: 5%;
+}
+
+#ul{
+    margin-left: 7%;
+}
+
+.b-left{
+    margin-top: 10%;
+    margin-block-end: 20%;
+    text-align: left;
+    text-decoration: black;
+}
+.b-right{
+    margin-top: 10%;
+    margin-block-end: 20%;
+    text-align: right;
+    text-decoration: black;

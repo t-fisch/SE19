@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="intro">
+  <div class="slideshow">
+    <div class="slideshow-pic">
+        <img class="intro_pic" src="{{url_for('static', filename='img/roulette/01_haus.jpg')}}" />
+        <img class="intro_pic" src="{{url_for('static', filename='img/roulette/02_rezeption.jpg')}}" />
+        <img class="intro_pic" src="{{url_for('static', filename='img/roulette/03_warten.jpg')}}" />
+
+        <div class="button-carusell-collection">
+            <button class="button-carusell button-left" id="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="button-carusell button-right" id="next" onclick="plusSlides(+1)">&#10095;</button>
+        </div>
+    </div>
+    <div class="dot-collection">
+        <span class="dot" onclick='currentSlide(1)'></span>
+        <span class="dot" onclick='currentSlide(2)'></span>
+        <span class="dot" onclick='currentSlide(3)'></span>
+    </div>
+  </div>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  <div class="intro_new">
+       <h1>Kinder, Jugendliche und Erwachsene auf ihrem Lebensweg zu begleiten, ihre Entwicklung zu unterstützen,
+       sie zu stärken und bei Erkrankungen auf sanfte und gute Art und Weise zu heilen ist unser wichtigstes Ziel.
+       </h1>
+  </div>
+</div>
+
+<div class="newsection">
+      <h2 id="anchor-therapie">Therapiemethoden</h2>
+</div>
+
+<div class="therapiemethoden">
+      <p>Mit ganzheitlichem Blick behandeln wir schulmedizinisch fundiert und je nach Bedarf mit komplementärmedizinischen Methoden:
+        Ohr- und Körperakupunktur, klassische Homöopathie, Ernährung, mikrobiologische Therapie und weitere Methoden </p>
+      <br>
+      <p>Wir orientieren uns an den aktuellen Leitlinien und geben die entsprechenden Medikamente, so viel wie nötig aber so wenig
+        wie möglich. In vielen Fällen können Lebensenergie und Immunsystem bereits durch Anpassung der Ernährung, Unterstützung
+        der Darmgesundheit, Elimination von Störfaktoren und Regulierung von Schlaf, Rhythmus und Lebenswandel effektiv unterstützt
+        werden.</p>
+      <br>
+        Wir wünschen uns für unsere Patienten, dass sie dauerhaft gesund bleiben, nur in Ausnahmefällen medikamentöse oder
+        chirurgische Behandlung benötigen und ihr Leben voller  Energie gestalten können (Energetische Medizin).</p>
+
+    <div class= 'container-methods'>
+        <div class='cellm'>
+            <a class= "button" href="{{ url_for('schulmedizin') }}">
+                <img class="pic-meth" src="{{url_for('static', filename='img/icon/schul.svg')}}" />
+                <h3 class="icon-text">Schulmedizin</h3>
+            </a>
+        </div>
+        <div class='cellm cell-aku'>
+            <a class= "button" href="{{ url_for('akupunktur') }}">
+                <img class="pic-meth" src="{{url_for('static', filename='img/icon/aku.svg')}}" />
+                <h3 class="icon-text">Akupunktur</h3>
+            </a>
+        </div>
+        <div class='cellm cell-hom'>
+            <a class= "button" href="{{ url_for('homoeopathie') }}">
+                <img class="pic-meth" src="{{url_for('static', filename='img/icon/hom.svg')}}" />
+                <h3 class="icon-text">Homöopathie</h3>
+            </a>
+        </div>
+        <div class='cellm cell-ern'>
+            <a class= "button" href="{{ url_for('ernaehrung') }}">
+                <img class="pic-meth" src="{{url_for('static', filename='img/icon/er.svg')}}" />
+                <h3 class="icon-text">Ernährung</h3>
+            </a>
+        </div>
+        <div class='cellm cell-mik'>
+            <a class= "button" href="{{ url_for('mikrobiologie') }}">
+                <img class="pic-meth" src="{{url_for('static', filename='img/icon/mikro.svg')}}" />
+                <h3 class="icon-text">Mikrobiologie</h3>
+        </a>
+        </div>
+        <div class='cellm cell-wei'>
+            <a class= "button" href="{{ url_for('weitere') }}">
+                <img class="pic-meth" id="pic-weiter" src="{{url_for('static', filename='img/icon/weiter.svg')}}" />
+                <h3 class="icon-text">Weitere Methoden</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="newsection">
+      <h2 id="anchor-sprechstunde">Sprechstunde</h2>
+</div>
+
+<div class= 'container-sprechstunde'>
+        <div class='cellS cell-Montag'>
+            <h4>Montag</h4>
+            <p>Sprechstunde für besondere Leistungen / <br> Akupunktur: 15:00 - 16:00 Uhr</p>
+            <p>Terminsprechstunde: 16:00 - 18:00 Uhr</p>
+            <p>Akutsprechstunde: 18:00 - 19:30 Uhr</p>
+            <p>Klassische Homöopathie: 20:00 - 21:00 Uhr</p>
+        </div>
+        <div class='cellS cell-DiMiFr'>
+            <h4>Dienstag, Mittwoch, Freitag</h4>
+            <p>Terminsprechstunde: 8:00 - 11:30 Uhr</p>
+            <p>Akutsprechstunde: 11:30 - 12:30 Uhr</p>
+            <p>Klassische Homöopathie: 13:00 - 14:00 Uhr</p>
+        </div>
+        <div class='cellS cell-Do'>
+            <h4>Donnerstag</h4>
+            <p>Terminsprechstunde: 8:00 - 11:30 Uhr</p>
+            <p>Akutsprechstunde: 11:30 - 12:30Uhr</p>
+            <br>
+            <p>Sprechstunde für besondere Leistungen / <br> Akupunktur: 15:00 - 16:00 Uhr</p>
+            <p>Terminsprechstunde: 16:00 - 18:00 Uhr</p>
+            <p>Akutsprechstunde: 18:00 - 19:30Uhr</p>
+            <p>Klassische Homöopathie: 20:00 - 21:00 Uhr</p>
+        </div>
+        <div class='cellS cell-Sa'>
+            <h4>Samstag</h4>
+            <p>Sprechstunde nach Vereinbarung</p>
+        </div>
+  </div>
+    <div class="sprechstunde-background">
+        <h4 id='terminvereinbarung'>Termine können telefonisch vereinbart werden: <a class="telefonnummer" href="tel:+496306701677">06306-701677</a></h4>
+    </div>
+
+
+
+    {% for c in cm %}
+  <div>
+    <p><b>Your comment gut successfully added:</b> <b>{{c.body}}</b></p>
+</div>
+{% endfor %}
+
+<div class="newsection">
+      <h2 id="anchor-leaveComment">Leave a Comment</h2>
+</div>
+<div class="leaveComment">
+      <form class="leaveComment" action="" method="post" novalidate>
+          {{ form.hidden_tag() }}
+          <p>
+              {{ form.firstname.label }}<br>
+              {{ form.firstname(size=50) }}<br>
+          </p>
+          <p>
+              {{ form.lastname.label }}<br>
+              {{ form.lastname(size=50) }}<br>
+          </p>
+          <p>
+              {{ form.body.label }}<br>
+              {{ form.body(cols="80", rows="20") }}
+              {% for error in form.body.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+              <br>
+          </p>
+          <p>{{ form.submit() }}</p>
+      </form>
+</div>
+{% endblock %}
