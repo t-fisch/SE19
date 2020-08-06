@@ -18,15 +18,14 @@ def showreviews():
 def leaveComment():
     form = CommentForm()
     if form.validate_on_submit():
-        flash('New Comment from {} {}: {}'.format(
-        form.firstname.data, form.lastname.data, form.body.data))
+        flash('Your comment "{}" has been added successfully!'.format(
+        form.body.data))
 
         c = Comment(firstname=form.firstname.data, lastname=form.lastname.data, body=form.body.data)
         db.session.add(c)
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('leaveComment.html', title='Home', form = form)
-#    return render_template('leaveComment.html', title="Leave a Comment")
 
 @app.route('/schulmedizin')
 def schulmedizin():

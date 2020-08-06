@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="newsection">
+  <h2>Leave a Comment! </h2>
+</div>
+
+<div class="leaveComment">
+      <form class="leaveComment" action="" method="post" novalidate>
+          {{ form.hidden_tag() }}
+          <p>
+              {{ form.firstname.label }}<br>
+              {{ form.firstname(size=50) }}<br>
+          </p>
+          <p>
+              {{ form.lastname.label }}<br>
+              {{ form.lastname(size=50) }}<br>
+          </p>
+          <p>
+              {{ form.body.label }}<br>
+              {{ form.body(cols="80", rows="20") }}
+              {% for error in form.body.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+              <br>
+          </p>
+          <p>{{ form.submit() }}</p>
+      </form>
+</div>
+<div class= "b-left">
+     <a class= "button" href="{{ url_for('index') }}">
+         &#10094; Cancel
+     </a>
+ </div>
+{% endblock %}

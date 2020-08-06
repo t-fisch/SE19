@@ -51,3 +51,9 @@
     margin-block-end: 20%;
     text-align: right;
     text-decoration: black;
+}
+.button{
+    text-decoration: none;
+    color: #705261;
+    text-decoration-line: none;
+}

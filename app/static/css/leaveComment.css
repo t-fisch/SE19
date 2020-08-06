@@ -1,0 +1,41 @@
+/*leave comment*/
+.leaveComment{
+  padding-left: 5%;
+}
+
+/*divider*/
+.newsection{
+  border: 20px;
+  padding: 5%;
+}
+
+#firstname, #lastname, #body{
+  border: none;
+  border-radius:5px;
+}
+
+#firstname, #lastname{
+  height:30;
+}
+
+#submit{
+  border: none;
+  margin-top: 10px;
+  background-color: #705261;
+  color: white;
+  width: 130px;
+  height: 45px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.button{
+    text-decoration: none;
+    color: #705261;
+    text-decoration-line: none;
+}
+.b-left{
+  margin-left: 10%;
+  margin-top: 3%;
+}

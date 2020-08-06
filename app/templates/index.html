@@ -122,17 +122,18 @@
     </div>
 
 <div class="newsection">
-      <h2 id="anchor-leaveComment">Reviews</h2>
+      <h2 id="anchor-leaveComment">Reviews from Customers</h2>
 </div>
 
-{% for c in cm %}
-  <div>
-    <p><b>{{c.firstname}}</b>, <b>{{c.lastname}}:</b> <b>{{c.body}}</b></p>
-  </div>
-{% endfor %}
+<div class="review">
+      {% for c in cm %}
+        <div>
+          <p><b>{{c.firstname}}</b>, <b>{{c.lastname}}:</b> </br>{{c.body}} </br></br></p>
+        </div>
+      {% endfor %}
 
-<div class="btn-div">
-<a class="btn" type="button" href="{{ url_for('leaveComment') }}">Leave a Comment</a>
+      <div class="btn-div">
+      <a class="btn" type="button" href="{{ url_for('leaveComment') }}">Leave a Comment</a>
+      </div>
 </div>
-
 {% endblock %}

@@ -18,6 +18,24 @@
     overflow: hidden;
     max-height: 751px;
 }
+/*carusell*/
+.button-carusell{
+  font-size: 30pt;
+  border: none;
+  background: none;
+  color: white;
+  z-index: 4;
+  margin-top: -20%;
+}
+.button-left{
+  margin-left: 3%;
+}
+.button-right{
+  margin-left: 97%;
+}
+.dot-collection{
+  z-index: 5;
+}
 
 /*divider*/
 .newsection{
@@ -117,30 +135,23 @@
     display: none;
 }
 
-/*leave comment*/
-.leaveComment{
-  padding-left: 10%;
+/*Reviews*/
+.review{
+  margin-left: 10%;
 }
 
-#firstname, #lastname, #body{
-  border: none;
-  border-radius:5px;
+.btn-div{
+  height: 130px;
+  width: 200px;
 }
-
-#firstname, #lastname{
-  height:30;
-}
-
-#submit{
+.btn{
   border: none;
   margin-top: 10px;
   background-color: #705261;
   color: white;
-  width: 130px;
-  height: 45px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-}
+  text-decoration: none;
 }
